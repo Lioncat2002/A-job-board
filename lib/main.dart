@@ -6,7 +6,7 @@ import 'components/nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
-  SystemChrome.setEnabledSystemUIOverlays([]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 }
 
 class MyApp extends StatelessWidget {
