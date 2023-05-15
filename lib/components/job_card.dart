@@ -7,11 +7,14 @@ class JobCard extends StatefulWidget {
 
   final String smallJobDescription;
 
+  final String imageUrl;
+
   const JobCard({
     super.key,
     required this.jobTitle,
     required this.smallJobDescription,
     required this.jobDescription,
+    required this.imageUrl,
   });
 
   @override
@@ -31,26 +34,29 @@ class JobCardState extends State<JobCard> {
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
+          child: Flex(
+            direction: Axis.vertical,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                //title
                 widget.jobTitle,
                 style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 20,
                 ),
               ),
-              Row(
+              Flex(
+                direction: Axis.horizontal,
                 children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     radius: 25,
-                    backgroundImage: NetworkImage("https://picsum.photos/50"),
+                    backgroundImage: NetworkImage(widget.imageUrl),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(widget.smallJobDescription),
+                  const Padding(padding: EdgeInsets.all(4)),
+                  Flexible(
+                    child: Text(
+                      widget.smallJobDescription,
+                    ),
                   ),
                 ],
               ),
@@ -73,10 +79,9 @@ class JobCardState extends State<JobCard> {
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
+                      CircleAvatar(
                         radius: 25,
-                        backgroundImage:
-                            NetworkImage("https://picsum.photos/50"),
+                        backgroundImage: NetworkImage(widget.imageUrl),
                       ),
                       const Padding(padding: EdgeInsets.all(4)),
                       Flexible(
@@ -93,21 +98,13 @@ class JobCardState extends State<JobCard> {
                   ),
                   Text(
                     widget.jobDescription,
-                    //title
-                    //"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
-                    //"eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    //" Ut enim ad minim veniam, quis nostrud exercitation ullamco "
-                    //"laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
-                    //"dolor in reprehenderit in voluptate velit esse cillum dolore eu "
-                    //"fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,"
-                    //" sunt in culpa qui officia deserunt mollit anim id est laborum.",
                     style: const TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 15,
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () => print("yomama"),
+                    onPressed: () => print("you have successfully applied"),
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.black)),

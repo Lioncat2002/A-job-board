@@ -41,7 +41,7 @@ class _MyHomePageState extends State<HomePage> {
       style: TextStyle(color: Colors.black),
     ),
     const Text(
-      "messages",
+      "Messages",
       style: TextStyle(color: Colors.black),
     ),
     const Text(
@@ -66,10 +66,11 @@ class _MyHomePageState extends State<HomePage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: _titles.elementAt(selectedidx),
+        title: _titles
+            .elementAt(selectedidx), //for the titles to change on tab click
       ),
       body: SafeArea(
-        child: _pages.elementAt(selectedidx),
+        child: _pages.elementAt(selectedidx), //for page changes
       ), //for changes the pages
       bottomNavigationBar: GNav(
         rippleColor: Colors.grey[300]!,
