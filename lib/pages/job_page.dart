@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/card.dart';
+import '../components/job_card.dart';
 
 class Job extends StatelessWidget {
   const Job({
@@ -24,7 +24,7 @@ class Job extends StatelessWidget {
           ),
           JobCard(
             jobTitle:
-                "This is a game dev project bro this is shit. This is some",
+                "This is a game dev project bro this is shit. This is some ",
             smallJobDescription: "This is a small job description for a game",
             jobDescription:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
