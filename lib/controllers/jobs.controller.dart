@@ -1,4 +1,4 @@
-import 'package:job_board/mock/mock_jobs.dart';
+import 'package:job_board/mock/mock.jobs.dart';
 
 import '../models/jobs.model.dart';
 

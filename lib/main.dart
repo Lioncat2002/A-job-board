@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:job_board/pages/job_page.dart';
+import 'package:job_board/pages/job.page.dart';
 
 void main() {
   runApp(const MyApp());
