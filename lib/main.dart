@@ -41,18 +41,18 @@ class _MyHomePageState extends State<HomePage> {
       style: TextStyle(color: Colors.black),
     ),
     const Text(
-      "Messages",
+      "Applied",
       style: TextStyle(color: Colors.black),
     ),
     const Text(
-      "profile",
+      "Profile",
       style: TextStyle(color: Colors.black),
     ),
   ];
   static final List<Widget> _pages = [
     const Job(),
     const Center(
-      child: Text("Messages"),
+      child: Text("You will see you applied jobs here"),
     ),
     const Center(
       child: Text("Profile"),
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<HomePage> {
             icon: Icons.work_outline,
           ),
           GButton(
-            icon: Icons.mail_outline,
+            icon: Icons.check_box_outlined,
           ),
           GButton(
             icon: Icons.person_outline,
