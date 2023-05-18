@@ -12,15 +12,17 @@ class Job extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var notApplied =
+        jobs.where((element) => element.isApplied == "false").toList();
     return Center(
       child: ListView.builder(
-        itemCount: jobs.length,
+        itemCount: notApplied.length,
         itemBuilder: (BuildContext context, int index) {
           return JobCard(
-            jobTitle: jobs[index].jobTitle,
-            smallJobDescription: jobs[index].smallJobDescription,
-            jobDescription: jobs[index].jobDescription,
-            imageUrl: jobs[index].imageUrl,
+            jobTitle: notApplied[index].jobTitle,
+            smallJobDescription: notApplied[index].smallJobDescription,
+            jobDescription: notApplied[index].jobDescription,
+            imageUrl: notApplied[index].imageUrl,
           );
         },
       ),

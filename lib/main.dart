@@ -37,7 +37,7 @@ class _MyHomePageState extends State<HomePage> {
   int selectedidx = 0;
   static final List<Widget> _titles = [
     const Text(
-      "jobs",
+      "Jobs",
       style: TextStyle(color: Colors.black),
     ),
     const Text(
