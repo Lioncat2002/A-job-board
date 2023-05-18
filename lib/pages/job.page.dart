@@ -8,7 +8,7 @@ class Job extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  static final jobs = fetchArticle(); //fetching mock data
+  static final jobs = fetchJobs(); //fetching mock data
 
   @override
   Widget build(BuildContext context) {
