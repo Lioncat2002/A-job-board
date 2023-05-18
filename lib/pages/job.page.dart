@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:job_board/controllers/jobs.controller.dart';
 
 import '../components/job_card.dart';
+import '../controllers/user.controller.dart';
 
 class Job extends StatelessWidget {
   const Job({
@@ -12,8 +13,9 @@ class Job extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var user = fetchUser();
     var notApplied =
-        jobs.where((element) => element.isApplied == "false").toList();
+        jobs.where((element) => !user.applied.contains(element.id)).toList();
     return Center(
       child: ListView.builder(
         itemCount: notApplied.length,

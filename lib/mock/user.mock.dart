@@ -2,8 +2,9 @@ const Map<String, dynamic> user = {
   "_id": "0",
   "name": "John Doe",
   "email": "john.doe@email.com",
+  "imageUrl": "https://picsum.photos/50",
   "applied": [
-    "0", //ids for the applied jobs
+    //ids for the applied jobs
     "1",
   ]
 };

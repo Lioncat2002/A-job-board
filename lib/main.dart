@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:job_board/pages/applied.page.dart';
 import 'package:job_board/pages/job.page.dart';
+import 'package:job_board/pages/profile.page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,12 +53,8 @@ class _MyHomePageState extends State<HomePage> {
   ];
   static final List<Widget> _pages = [
     const Job(),
-    const Center(
-      child: Text("You will see you applied jobs here"),
-    ),
-    const Center(
-      child: Text("Profile"),
-    ),
+    const Applied(),
+    const Profile(),
   ];
   @override
   Widget build(BuildContext context) {

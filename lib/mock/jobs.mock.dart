@@ -6,7 +6,6 @@ const List<Map<String, String>> jobs = [
     "smallJobDescription": "This is a small job description",
     "jobDescription": "Big job description",
     "imageUrl": "https://picsum.photos/50",
-    "isApplied": "false"
   },
   {
     "_id": "1",
@@ -14,7 +13,6 @@ const List<Map<String, String>> jobs = [
     "smallJobDescription": "I want a backend project is python and flask",
     "jobDescription": "Big job description",
     "imageUrl": "https://picsum.photos/50",
-    "isApplied": "true"
   },
   {
     "_id": "2",
@@ -22,6 +20,12 @@ const List<Map<String, String>> jobs = [
     "smallJobDescription": "This is a small job description",
     "jobDescription": "Big job description",
     "imageUrl": "https://picsum.photos/50",
-    "isApplied": "false"
+  },
+  {
+    "_id": "3",
+    "jobTitle": "Another project",
+    "smallJobDescription": "A very small description",
+    "jobDescription": "Another job description",
+    "imageUrl": "https://picsum.photos/50",
   },
 ];

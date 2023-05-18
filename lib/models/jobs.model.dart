@@ -5,15 +5,13 @@ class Job {
   final String smallJobDescription;
   final String jobDescription;
   final String imageUrl;
-  final String isApplied;
 
   Job(
       {required this.id,
       required this.jobTitle,
       required this.smallJobDescription,
       required this.jobDescription,
-      required this.imageUrl,
-      required this.isApplied});
+      required this.imageUrl});
 
   factory Job.fromJson(Map<String, dynamic> json) {
     return Job(
@@ -21,7 +19,6 @@ class Job {
         jobTitle: json['jobTitle']!,
         smallJobDescription: json['smallJobDescription']!,
         jobDescription: json['jobDescription']!,
-        imageUrl: json['imageUrl']!,
-        isApplied: json['isApplied']!);
+        imageUrl: json['imageUrl']!);
   }
 }
